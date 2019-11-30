@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动与清除浮动</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #a1{
+            border: 2px solid green;
+        }
+
+        .c1,.c2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        /*.c3{*/
+            /*clear: left;*/
+        /*}*/
+
+        #a1:after{
+            content: '';
+            clear: left;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="a1">
+    <div class="c1">c1</div>
+    <div class="c2">c2</div>
+    <!--<div class="c3"></div>-->
+</div>
+
+
+</body>
+</html>

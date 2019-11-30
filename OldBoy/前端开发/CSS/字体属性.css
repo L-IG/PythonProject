@@ -1,0 +1,30 @@
+.c1{
+    font-family: "Microsoft YaHei UI Light",'微软雅黑';
+    font-size: 14px;
+
+    /*字重*/
+    font-weight: 900;
+
+    /*字体颜色另一种表现方法*/
+    color: rgb(23,23,23);
+    color: rgba(100,100,100,0.6);
+}
+
+
+.c2{
+    /*文字对齐*/
+    text-align: center;
+
+    /*文字装饰*/
+    text-decoration: underline;
+}
+
+/*位置装饰常用方法：去掉a标签的下划线*/
+a{
+    text-decoration: none;
+}
+
+/*首行缩进*/
+.c1{
+    text-indent: 28px;
+}

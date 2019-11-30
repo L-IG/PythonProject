@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>form表单</title>
+</head>
+<body>
+<p>
+    用户名：<input type="text">
+</p>
+<p>
+    密码：<input type="password">
+</p>
+
+
+<p>性别</p>
+<p>
+    男<input name="gender" type="radio">
+    女<input name="gender" type="radio">
+    未知<input name="gender" type="radio">
+</p>
+
+
+<!--lable规范用法-->
+<p>
+    <label for="r1">男</label>
+    <input id="r1" name="gender" type="radio">
+    <label for="r2">女</label>
+    <input id="r2" name="gender" type="radio">
+
+    <!--lable简单用法-->
+    <label>未知<input name="gender" type="radio"></label>
+</p>
+
+爱好
+<p>
+    <input type="checkbox">足球
+    <input type="checkbox">篮球
+    <input type="checkbox">乒乓球
+</p>
+
+<!--下拉菜单-->
+<select name="" id="">
+    <option value="">北京</option>
+    <option value="">上海</option>
+    <option value="">南京</option>
+</select>
+
+<select name="" id="">
+    <optgroup label="北京">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+    </optgroup>
+    <optgroup label="上海">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+    </optgroup>
+</select>
+
+
+
+<p>生日<input type="date"></p>
+<p><textarea name="" id="" cols="30" rows="10"></textarea></p>
+
+<input type="submit">
+</body>
+</html>

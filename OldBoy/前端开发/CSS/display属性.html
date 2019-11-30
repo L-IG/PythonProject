@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <style>
+        .c1{
+            background-color: red;
+            display: inline;
+        }
+
+        .c2{
+            background-color: green;
+            display: block;
+        }
+
+        /*去掉列表前的小圆点显示*/
+        ul{
+            list-style-type: none;
+        }
+
+        li{
+            display: inline;
+            /*border-right: 1px solid #666;*/
+            /*padding: 20px;*/
+        }
+
+        li.last{
+            border-right: none;
+        }
+
+        li>a{
+            border-right: 1px solid red;
+            /*panding顺序：上右下左*/
+            padding: 0 20px 0 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="c1">我是div</div>
+<span class="c2">我是span</span>
+<span class="c2">我是span</span>
+
+<ul>
+    <li><a href="">手机</a></li>
+    <li><a href="">平板</a></li>
+    <li><a href="">电脑</a></li>
+    <li class="last"><a href="">相机</a></li>
+</ul>
+</body>
+</html>

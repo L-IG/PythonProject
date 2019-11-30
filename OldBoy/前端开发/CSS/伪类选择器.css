@@ -1,0 +1,42 @@
+/*伪类选择器*/
+/*链接没被访问过*/
+a:link{
+    color: red;
+}
+
+/*链接被访问过*/
+a:visited{
+    color: rebeccapurple;
+}
+
+/*鼠标放到链接上显示什么颜色*/
+a:hover{
+    color: blue;
+}
+
+/*div标签也可以使用hover*/
+div:hover{
+    color: blue;
+}
+
+/*鼠标点击时显示颜色*/
+a:active{
+    color: azure;
+}
+
+/*input：获取光标时显示颜色*/
+input:focus{
+    color: red;
+    background-color: darkolivegreen;
+}
+
+/*伪元素选择器*/
+.c1:before{
+    content:'*';
+    color: red;
+}
+
+.c1:after{
+    content: '[?]';
+    color: blue;
+}

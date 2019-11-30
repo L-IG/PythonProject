@@ -1,0 +1,28 @@
+div.c0{
+    background-color: blue;
+}
+
+div.c1{
+    width: 1690px;
+    height: 1341px;
+    /*background-image: url("coco.jpg");*/
+
+    border: 5px solid blue;
+
+    /*设置图片平铺方式*/
+    /*background-repeat: no-repeat;*/
+    /*background-repeat: repeat-x;*/
+
+    /*设置图片位置*/
+    /*background-position: center;*/
+
+    background:url("coco.jpg") no-repeat 50% 50%;
+}
+
+/*边框属性*/
+.c3{
+    height: 500px;
+    width: 500px;
+    border: 10px solid green;
+}
+

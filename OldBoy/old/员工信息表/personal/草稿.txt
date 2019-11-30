@@ -1,0 +1,10 @@
+add staff_table Max,19,16412684614,Artist,2013-10-13
+
+delete from staff_table  where age = 19
+delete from staff_table
+
+find id,phone,name from staff_table where age > 20
+find * from staff_table where age > 20
+
+update staff_table set age = 22 where name = Alex Li
+update staff_table set name = Tom

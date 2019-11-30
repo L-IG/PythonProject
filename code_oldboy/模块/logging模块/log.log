@@ -1,0 +1,3 @@
+2019-11-30 11:32:11,242 - root - WARNING - 警告错误
+2019-11-30 11:32:11,242 - root - ERROR - error message
+2019-11-30 11:32:11,243 - root - CRITICAL - critical message
