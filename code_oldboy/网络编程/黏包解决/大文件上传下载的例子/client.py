@@ -21,17 +21,17 @@ ret = sk.recv(4)
 file_zie = struct.unpack('i', ret)[0]
 current_size = file_zie
 
-while True:
-    if current_size <= 4096:
-        content = sk.recv(current_size)
-        with open(FILE_NAME, 'ab') as f:
+with open(FILE_NAME, 'ab') as f:
+    while True:
+        if current_size <= 4096:
+            content = sk.recv(current_size)
             f.write(content)
             md5.update(content)
-        break
+            break
 
-    current_size -= 4096
-    content = sk.recv(4096)
-    with open(FILE_NAME, 'ab') as f:
+        current_size -= 4096
+        content = sk.recv(4096)
+
         f.write(content)
         md5.update(content)
 
