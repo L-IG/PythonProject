@@ -27,7 +27,13 @@ cursor.execute(sql, [user, pwd])
 
 # 也可以用字典的形式
 # cursor.execute(sql,{'u':user,'p':pwd})
+
+# 拿一条
 result = cursor.fetchone()
+
+# 拿N条
+# result = cursor.fetchall()
+
 cursor.close()
 conn.close()
 if result:
