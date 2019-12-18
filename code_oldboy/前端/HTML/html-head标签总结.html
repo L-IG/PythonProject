@@ -1,0 +1,44 @@
+<!--这个放在第一行,表示使用HTML5-->
+<!DOCTYPE html>
+
+<!--lang="zh-CN":表示使用的主要语言是中文,英文是en-->
+<html lang="zh-CN">
+<head>
+
+    <!--HEAD常见元素介绍:
+    <title></title>	定义网页标题
+    <style></style>	定义内部样式表
+    <script></script>定义JS代码或引入外部JS文件
+    <link/>	引入外部样式表文件
+    <meta/>	定义网页原信息
+    -->
+
+    <style>
+        p {
+            color: red
+        }
+    </style>
+    <script>
+        alert('Hello OldBoy!')
+    </script>
+    <link rel="stylesheet" href="">
+
+    <!--meta属性详细介绍
+    1.http-equiv属性：相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确地显示网页内容，与之对应的属性值为content，content中的内容其实就是各个参数的变量值。
+    2.name属性: 主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。
+    -->
+    <!--2秒后跳转到对应的网址，注意引号-->
+    <meta http-equiv="refresh" content="2;URL=https://www.oldboyedu.com">
+    <!--指定文档的编码类型-->
+    <meta http-equiv="content-Type" charset=UTF8">
+    <!--一般简写为:-->
+    <meta charset="UTF-8">
+    <!--告诉IE以最高级模式渲染文档-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <title>head标签总结</title>
+</head>
+<body>
+<p>我是一个标签</p>
+</body>
+</html>
