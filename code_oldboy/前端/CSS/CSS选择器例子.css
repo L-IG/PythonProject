@@ -1,0 +1,125 @@
+/*
+解释性的信息
+*/
+/*全局通用的样式*/
+/*导航条的样式*/
+/*商品列表样式*/
+
+/*基本选择器*/
+/*标签选择器,又称元素选择器*/
+p {
+    color: red;
+    font-size: 18px
+}
+
+/*ID选择器*/
+#p2 {
+    color: black;
+}
+
+/*类选择器*/
+.c1 {
+    color: yellow;
+}
+
+/*通用选择器*/
+* {
+    color: aqua;
+}
+
+/*组合选择器*/
+/*后代选择器 空格表示*/
+#d1 p {
+    color: red;
+}
+
+/*儿子选择器 大于号表示*/
+#d1 > p {
+    color: green;
+}
+
+/*毗邻选择器 加号*/
+div + p {
+    color: yellow;
+}
+
+/*弟弟选择器 波浪号表示*/
+div ~ p {
+    color: blue;
+}
+
+/*注意:毗邻选择器和弟弟选择器 都是同级关系,并且都是向后找*/
+
+
+/*属性选择器*/
+/*类似于基本选择器里的类选择器*/
+[s9] {
+    color: red;
+}
+
+[s9="hao"] {
+    color: green;
+}
+
+
+/*分组和嵌套*/
+/*当样式有重复的时候*/
+/*推荐分行写选择器,但是要注意一定要加逗号*/
+#d1, p {
+    color: red;
+}
+
+/*嵌套使用选择器*/
+#d1, p {
+    color: blue;
+}
+
+/*伪类选择器*/
+/* 未访问的链接 */
+a:link {
+    color: #FF0000
+}
+
+/* 已访问的链接 */
+a:visited {
+    color: #00FF00
+}
+
+/* 鼠标移动到链接上,不仅仅是对a标签有用 */
+a:hover {
+    color: #FF00FF
+}
+
+/* 选定的链接,在鼠标按下之后鼠标松开之前,一般是一瞬间*/
+a:active {
+    color: #0000FF
+}
+
+/*input输入框获取焦点时样式*/
+input:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+
+/*伪元素选择器*/
+/*first-letter*/
+/*常用的给首字母设置特殊样式：*/
+p:first-letter {
+    font-size: 48px;
+    color: red;
+}
+
+/*before*/
+/*在每个<p>元素之前插入内容*/
+p:before {
+    content: "*";
+    color: red;
+}
+
+/*after*/
+/*在每个<p>元素之后插入内容*/
+p:after {
+    content: "[?]";
+    color: blue;
+}

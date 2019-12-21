@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>body标签之表单</title>
+</head>
+<body>
+<!--form表单相关内容   form 与 from-->
+<!--	前后端有数据交互的时候用form表单-->
+<!--	form表单提交数据的几个注意事项:-->
+<!--		1. 所有获取用户输入的标签都必须放在form表单里面-->
+<!--		2. action控制着往哪儿提交-->
+<!--		3. input\select\textarea 都需要有name属性-->
+<!--		4. 提交按钮 <input type="submit">-->
+
+<!--	小总结:-->
+<!--		input系列:-->
+<!--			text-->
+<!--				value        设置默认值-->
+<!--				placeholder 设置占位内容-->
+<!--			password-->
+<!--			radio  单选框-->
+<!--			checkbox 多选框-->
+<!--			date   日期-->
+<!--			datetime 时间-->
+<!--			file  文件-->
+<!--			button  普通按钮,多用JS给它绑定事件-->
+<!--			reset   重置-->
+<!--			submit  提交-->
+<!--			埋下伏笔:什么时候用 <input type="hidden">-->
+<!--		textarea    大段文本-->
+<!--		select      下拉菜单-->
+<!--		option      具体的下拉选项-->
+<!--		optgroup    分组的下拉框-->
+<!--		  -label="上海"-->
+
+<!--注册示例-->
+<form action="http://127.0.0.1:8000/upload/" method="post" enctype="multipart/form-data" autocomplete="off" novalidate>
+    <!--    text-->
+    <label for="i1">用户名:</label>
+    <input id="i1" name="name" type="text" value="小强">
+    <label for="">
+        <input name="name" type="text" placeholder="小强" disabled>
+    </label>
+
+    <!--password-->
+    <label for="">密码:
+        <input name="password" type="password">
+    </label>
+    <!--email-->
+    <label for="">邮箱:
+        <input type="email" name="email">
+    </label>
+    <!--hidden-->
+    <label for="">
+        <input type="hidden" value="hidden">
+    </label>
+
+    <p>性别:
+        <label>男
+            <input name="gender" type="radio" value="1">
+        </label>
+
+        <label for="r2"> 女</label>
+        <input id="r2" name="gender" type="radio" value="0">
+
+        <label for="r3">保密</label>
+        <input id="r3" checked name="gender" type="radio" value="2">
+    </p>
+
+    <p>爱好:
+        <label for="">篮球
+            <input checked name="hobby" type="checkbox" value="basketball">
+        </label>
+        <label for="">足球
+            <input name="hobby" type="checkbox" value="football">
+        </label>
+        <label for="">双色球
+            <input checked name="hobby" type="checkbox" value="doublecolorball">
+        </label>
+
+    </p>
+
+    <p>生日:<input name="birthday" type="date"></p>
+
+    <select name="from1" id="s1">
+        <option value="bj">北京</option>
+        <option value="sh" selected>上海</option>
+        <option value="sc">四川</option>
+    </select>
+
+
+    <select name="from1" id="s11" multiple>
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="sc">四川</option>
+    </select>
+
+
+    <select name="from2" id="s2">
+        <optgroup label="北京">
+            <option value="cp">昌平</option>
+            <option value="cy">朝阳</option>
+            <option value="hd">海淀</option>
+            <option value="ft">丰台</option>
+        </optgroup>
+        <optgroup label="上海">
+            <option value="pdxq">浦东新区</option>
+            <option value="mhq">闵行区</option>
+            <option value="hpq">黄浦区</option>
+        </optgroup>
+        <optgroup label="四川">
+            <option value="pzh">攀枝花</option>
+            <option value="zg">自贡</option>
+            <option value="my">绵阳</option>
+        </optgroup>
+    </select>
+
+    <p><textarea name="info" id="t1" cols="30" rows="10">
+    </textarea></p>
+
+    <label for="t2">
+        <textarea name="info" id="t2" cols="30" rows="10"></textarea>
+    </label>
+
+    <p>头像:
+        <input name="lp" type="file">
+    </p>
+    <p><input type="submit" value="提交s9"></p>
+
+    <p><input type="button" value="button"></p>
+
+    <p><input type="reset" value="reset"></p>
+
+    <!--select标签-->
+    <select name="city" id="city">
+        <option value="1">北京</option>
+        <option selected="selected" value="2">上海</option>
+        <option value="3">广州</option>
+        <option value="4">深圳</option>
+    </select>
+    <!--属性说明：-->
+    <!--multiple：布尔属性，设置后为多选，否则默认单选-->
+    <!--disabled：禁用-->
+    <!--selected：默认选中该项-->
+    <!--value：定义提交时的选项值    -->
+
+    <!--    label标签-->
+    <!--定义：<label> 标签为 input 元素定义标注（标记）。-->
+    <!--说明：-->
+    <!--label 元素不会向用户呈现任何特殊效果。-->
+    <!-- <label> 标签的 for 属性值应当与相关元素的 id 属性值相同。  -->
+    <form action="">
+        <label for="username">用户名</label>
+        <input type="text" id="username" name="username">
+    </form>
+
+    <!--    textarea多行文本-->
+    <textarea name="memo" id="memo" cols="30" rows="10">默认内容</textarea>
+    <!--属性说明：-->
+    <!--name：名称-->
+    <!--rows：行数-->
+    <!--cols：列数-->
+    <!--disabled：禁用-->
+
+    <!--text	单行输入文本	<input type=text" />-->
+    <!--password	密码输入框	<input type="password"  />-->
+    <!--date	日期输入框	<input type="date" />-->
+    <!--checkbox	复选框	<input type="checkbox" checked="checked"  />-->
+    <!--radio	单选框	<input type="radio"  />-->
+    <!--submit	提交按钮	<input type="submit" value="提交" />-->
+    <!--reset	重置按钮	<input type="reset" value="重置"  />-->
+    <!--button	普通按钮	<input type="button" value="普通按钮"  />-->
+    <!--hidden	隐藏输入框	<input type="hidden"  />-->
+    <!--file	文本选择框	<input type="file"  />-->
+    <!--    上传文件时,需要设置为post以及enctype类型!!!!-->
+
+    <!--属性说明:-->
+    <!--name：表单提交时的“键”，注意和id的区别-->
+    <!--value：表单提交时对应项的值-->
+    <!--type="button", "reset", "submit"时，为按钮上显示的文本年内容-->
+    <!--type="text","password","hidden"时，为输入框的初始值-->
+    <!--type="checkbox", "radio", "file"，为输入相关联的值-->
+    <!--checked：radio和checkbox默认被选中的项-->
+    <!--readonly：text和password设置只读-->
+    <!--disabled：所有input均适用    -->
+
+    <!--有两个值很重要,就是name和value,对应后端接受数据的key和value !!!!   -->
+
+<!-- form表单提交 三要素:-->
+<!--			1. input\select\textarea 要有一个name属性-->
+<!--			2. 提交按钮必须要是 type="submit"-->
+<!--			3. form不是from;获取用户输入的标签都要放到form标签里面(仅限于form提交数据)-->
+
+</body>
+</html>

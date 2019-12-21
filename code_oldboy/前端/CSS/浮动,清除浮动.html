@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #d1 {
+            border: 1px solid black;
+        }
+
+        /*.c1, .c2 {*/
+        /*    float: left;*/
+        /*    height: 100px;*/
+        /*    !*width: 100%;*!*/
+        /*}*/
+        .c1 {
+            float: left;
+            height: 100px;
+            background: antiquewhite;
+            /*width: 100%;*/
+        }
+
+        .c2 {
+            /*float: left;*/
+            clear: left;
+            height: 100px;
+            background: antiquewhite;
+            /*width: 100%;*/
+        }
+        .c3{
+            /*height: 200px;*/
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<!--一旦给一个内联标签设置为浮动,这个标签就成了块级标签了,可以设置宽度-->
+<!--一个块级标签不设置宽度则默认宽度是根据浏览器的宽度的改变而改变-->
+<!--当设置了浮动后,如果不设置宽度,那么宽度就是这个标签内容的宽度了,和内联标签相似-->
+<!--类似于display的inline-block-->
+
+<!--父标签塌陷-->
+
+<div id='d1'>
+    <div class="c1">我是c1</div>
+    <div class="c2">我是c2</div>
+    <div class="c3">我是c3</div>
+    <!--    <div class="c1"></div>-->
+    <!--    <div class="c2"></div>-->
+</div>
+
+
+</body>
+</html>
