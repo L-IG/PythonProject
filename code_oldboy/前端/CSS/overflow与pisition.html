@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow与pisition</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #eeeeee;
+        }
+
+        .header-img {
+            width: 150px;
+            height: 150px;
+            border: 3px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .header-img > img {
+            max-width: 100%;
+        }
+
+        /*固定位置*/
+        .fixed-test {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<!-- overflow溢出属性-->
+<!--visible	默认值。内容不会被修剪，会呈现在元素框之外。-->
+<!--hidden	内容会被修剪，并且其余内容是不可见的。-->
+<!--scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。-->
+<!--auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。-->
+<!--inherit	规定应该从父元素继承 overflow 属性的值。-->
+
+<!--overflow（水平和垂直均设置）-->
+<!--overflow-x（设置水平方向）-->
+<!--overflow-y（设置垂直方向）-->
+
+<!--overflow的一个作用:-->
+<!--overflow一般用来处理标签内容与标签给定的长和宽不匹配的问题,-->
+<!--圆形头像就是一个用例,图像很大,但是标签的宽和长不够-->
+<!--当宽度和高度用100%表示使,表示用的是父标签的高度和宽度!!!!-->
+
+<!--border-radius: 50%;-->
+<!--标签边框的一个特性:让边框变成圆形-->
+
+<div class="header-img">
+    <img src="lp.jpg" alt="">
+</div>
+
+
+<!--定位:-->
+<!--		1. static   &ndash;&gt; 默认的-->
+<!--		2. relative &ndash;&gt; 相对定位(相对于原来的位置来说)-->
+<!--		3. absolute &ndash;&gt; 绝对定位(相对于最近的一个被定位过的祖宗标签) (完全脱离文档流)-->
+<!--		4. fixed    &ndash;&gt; 固定在某个位置(返回顶部按钮)-->
+<!--left   right   top   bottom-->
+
+<div class="fixed-test">返回顶部</div>
+</body>
+</html>

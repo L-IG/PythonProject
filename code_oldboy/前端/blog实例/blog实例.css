@@ -1,0 +1,126 @@
+/*公用样式*/
+* {
+    font-family: "PingFang SC", "Microsoft Yahei";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/*让标签具有占满浏览器的宽度*/
+html, body {
+    height: 100%
+}
+
+/*左边栏*/
+.left {
+    width: 20%;
+    background-color: rgb(76, 77, 76);
+    height: 100%;
+    float: left;
+    /*变成浮动流后,整个标签的大小就是内容的大小,具有内联标签的特性*/
+    /*有两种方法让标签具有占满浏览器的宽度,*/
+    /*第一个是用百分比符号,并且父元素都得设置宽度是100%,html,body都得设置*/
+    /*第二个使用position属性,position: fixed*/
+    position: fixed;
+}
+
+/*头像*/
+.head-img {
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+
+.head-img > img {
+    max-width: 100%;
+}
+
+/*博客介绍*/
+.blog-info {
+    color: white;
+    text-align: center;
+    margin: 10px auto;
+    border: 3px solid white;
+}
+
+/*博客链接*/
+/*去掉下划线*/
+a {
+    text-decoration: none;
+}
+
+/*把a标签用text-align:center;装饰并不会起作用,不会居中*/
+/*内联标签不生效,用块级标签,因为内联标签的大小是根据内容决定,而块级标签则不是,内容位置默认靠左边*/
+.blog_links,
+.blog_tags {
+    text-align: center;
+}
+
+.blog_links a,
+.blog_tags a {
+    color: white;
+}
+
+.blog_tags {
+    margin: 15px auto;
+}
+
+.blog_tags a:before {
+    content: '#';
+}
+
+/*右边栏*/
+.right {
+    width: 80%;
+    background-color: rgb(238, 237, 237);
+    float: right;
+    /*浮动标签高度和宽度即是内容的宽度和高度*/
+}
+
+.article-list {
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 10%;
+
+}
+
+.article-name {
+    /*将块级标签变成内联标签,具有不再独占一行的特点,但是仍然属于标准流*/
+    display: inline-block;
+}
+
+.article-time {
+    float: right;
+}
+
+.article-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.article-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.article-tag {
+    border-top: 1px solid #eeeeee;
+    margin-left: 15px;
+    padding: 5px 5px;
+}
+
+.article {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.clearfix {
+    clear: both;
+}
