@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .c1 {
+            width: 100px;
+            height: 100px;
+            background: #FF0000;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .c2 {
+            padding: 10px;
+            margin: 30px;
+            border: 2px solid black;
+        }
+
+        .c3 {
+            margin-top: 200px;
+            margin-left: 100px;
+            height: 100px;
+            width: 200px;
+            background: #FF0000;
+        }
+    </style>
+</head>
+<body>
+<!--块级标签和内联标签盒子模型的区别:-->
+<!--块级标签padding,margin都是可以设置左右和上下的,并且是占据空间的-->
+<!--内联标签设置padding,margin只有左右是生效的,上下并没生效-->
+<!--margin可以移动标签与标签之间的距离,如果数值是负数也,则可以让标签让相反的方向移动,从而改变标签在整个浏览器里的位置-->
+
+<!--<div class="c1"></div>-->
+
+<!--<span class="c2">我是span标签</span>-->
+<!--<p>我是p标签</p>-->
+<!--<p>我是p标签</p>-->
+<div class="c3"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>display应用</title>
+    <style>
+        /*ul li {*/
+        /*    color: greenyellow;*/
+        /*    padding-bottom: 20px;*/
+        /*}*/
+        a {
+            display: block;
+            /*width: 200px;*/
+            /*height: 200px;*/
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--有些标签是内联标签,它的标签大小就是内容的大小,会遇到一些情况,-->
+<!--如需要保持内容大小不变的情况下,把整个标签撑开,此时需要用到pandding ,-->
+<!--这种方法有缺点,如a标签需要点击,必须点击到内容才有效,点击到pandding范围则无效-->
+<!--解决办法:可以把a标签用dispaly变成块级标签,具有宽度和高度可设置的特性-->
+<!--块级标签设置成block后就可以设置有效的pandding了!!!-->
+
+
+<ul>
+    <li><a href="">玉米商城</a></li>
+    <li><a href="">电脑</a></li>
+    <li><a href="">笔记本</a></li>
+</ul>
+
+
+</body>
+</html>

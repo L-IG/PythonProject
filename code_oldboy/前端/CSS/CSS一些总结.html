@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS一些总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .c1 {
+            width: 100px;
+            height: 100px;
+            background: #00FF00;
+        }
+
+        .c2 {
+            /*width: 150px;*/
+            /*height: 150px;*/
+            background: #FF0000;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            right: 200px;
+            bottom: 0;
+
+        }
+
+        .c3 {
+            width: 200px;
+            height: 200px;
+            background: #0000FF;
+        }
+    </style>
+</head>
+<body>
+
+<!--三种常见脱离文档流的方法-->
+
+
+<!--让内联标签可以设置宽度和高度的方法:-->
+
+
+<!--内联标签和块级标签特性转化的办法-->
+
+
+<!--只是设置了position: absolute;的话,标签脱离文档流,变成浮动标签了-->
+<!--在原位置浮动,设置left,top之后,位置才会变化-->
+<!--设置position后,不仅变成浮动标签了,而且还可以设置宽度和高度了,即使标签没有任何内容,也没设置width,和height-->
+
+
+<div class="c1"></div>
+<!--<div class="c2"></div>-->
+<span class="c2"></span>
+<div class="c3"></div>
+
+</body>
+</html>

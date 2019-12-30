@@ -7,21 +7,23 @@
 }
 
 /*让标签具有占满浏览器的宽度*/
-html, body {
-    height: 100%
-}
+/*html, body {*/
+/*    height: 100%*/
+/*}*/
 
 /*左边栏*/
 .left {
     width: 20%;
     background-color: rgb(76, 77, 76);
-    height: 100%;
+    /*height: 100%;*/
     float: left;
     /*变成浮动流后,整个标签的大小就是内容的大小,具有内联标签的特性*/
     /*有两种方法让标签具有占满浏览器的宽度,*/
     /*第一个是用百分比符号,并且父元素都得设置宽度是100%,html,body都得设置*/
     /*第二个使用position属性,position: fixed*/
     position: fixed;
+    top: 0;
+    bottom: 0;
 }
 
 /*头像*/
