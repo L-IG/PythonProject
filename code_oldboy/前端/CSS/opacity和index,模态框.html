@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>opacity和index,模态框</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         .c1, .c2 {
             height: 200px;
             width: 200px;
@@ -19,6 +23,28 @@
             opacity: 0.5;
         }
 
+        .cover{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .modal{
+            width: 500px;
+            height: 300px;
+            background: white;
+            /*模态框里position的一个用法,首先用50%来让标签居中,*/
+            /*但是整个居中是根据左上角那个点的,真正想居中还是得修一下位置,用margin来移动标签,margin可以调整标签与标签的距离*/
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -250px;
+        }
+
     </style>
 </head>
 <body>
@@ -26,7 +52,14 @@
 <!--opacity不仅可以对背景颜色做透明度改变,还可以改变标签里的其他元素的透明度,包括文字-->
 <!--background: rgba(0,0,0,0.5);只能改变背景颜色的透明度-->
 
-<div class="c1">我是有C1类的div标签</div>
-<div class="c2">我是有C2类的div标签</div>
+
+<!--opacity应用-->
+<!--<div class="c1">我是有C1类的div标签</div>-->
+<!--<div class="c2">我是有C2类的div标签</div>-->
+
+<!--模态框举例-->
+<div class="cover"></div>
+<div class="modal"></div>
+
 </body>
 </html>

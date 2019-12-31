@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: blue;
+        }
+
+        .nav-left > ul > li {
+            list-style-type: none;
+            /*border: 1px solid red;*/
+            float: left;
+            /*float: left;与display: inline;的区别:float飘起来以后,li之间没有间隙,而display会有间隙*/
+            /*display: inline;*/
+            margin-right: 20px;
+        }
+
+        .nav-right > ul > li {
+            list-style-type: none;
+            /*border: 1px solid red;*/
+            float: right;
+            margin-left: 20px;
+        }
+
+        .nav {
+            padding: 15px 0;
+            border: 1px solid greenyellow;
+            background-color: black;
+        }
+
+        .nav:after {
+            content: "";
+            clear: both;
+            /*用这种方法清除浮动需要注意:
+            一定要指明这个内容是独占一行的,不然这个内容不会另起一行写,依旧在当前行,仍然会导致父标签塌陷*/
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav clearfix">
+    <div class="nav-left">
+        <ul>
+            <li><a href="">111</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">333</a></li>
+            <li><a href="">444</a></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li><a href="">AAA</a></li>
+            <li><a href="">BBB</a></li>
+            <li><a href="">CCC</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

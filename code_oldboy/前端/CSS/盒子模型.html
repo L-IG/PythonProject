@@ -30,6 +30,20 @@
             width: 200px;
             background: #FF0000;
         }
+
+        .cc_father {
+            border: 1px solid blue;
+            /*padding: 20px 20px 20px 20px;*/
+            padding: 0 auto;
+        }
+
+        .cc {
+            border: 1px solid black;
+            background-color: #FF00FF;
+            width: 150px;
+            height: 150px;
+            /*margin: 0 auto;*/
+        }
     </style>
 </head>
 <body>
@@ -44,6 +58,18 @@
 <!--<p>我是p标签</p>-->
 <!--<p>我是p标签</p>-->
 <div class="c3"></div>
+
+<!--padding: 0 auto;与margin: 0 auto;的区别:!!!!!-->
+<!--padding目的:某标签设置时,注意是想调整自己内部元素的位置,包括自己的内容-->
+<!--margin: 0 auto;目的:想调整当前标签与相邻(兄弟)标签的距离,设置把自己当做元素内的内容,调整与父标签的距离-->
+<!--一个对内,一个对外!!!!-->
+
+<div class="cc_father">
+    <div class="cc">
+        我是div里面的cc
+    </div>
+    hhh
+</div>
 
 
 </body>
