@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JS绑定事件</title>
+    <style>
+        .c1 {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+
+        .c2 {
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+
+<body>
+<!--方式一:直接在标签里写-->
+<!--<div class="c1 c2" onclick="foo(this)">点我</div>-->
+<div class="c1 c2" id="d1">点我</div>
+<script>
+    // function foo(ths) {
+    //     ths.classList.toggle("c2");
+    // }
+
+// 方式二:用js代码写,绑定事件属性为一个立即执行函数
+    var d1Ele = document.getElementById("d1");
+    d1Ele.onclick = function () {
+        this.classList.toggle("c2")
+    }
+
+    // 两种方式的函数写法有区别,更需要注意的是,this的写法!!!!
+    // click和this需要在一块
+
+</script>
+</body>
+</html>

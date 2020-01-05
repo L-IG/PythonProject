@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索框实例</title>
+</head>
+<body>
+<input type="text" value="iPhone11" id="d1">
+<input type="button" value="搜索" id="b1">
+
+<script>
+    var d1Ele = document.getElementById('d1');
+    var b1Ele = document.getElementById('b1');
+    var show_content = "iPhone11";
+    //给搜索框绑定获取了鼠标焦点事件
+    d1Ele.onfocus = function () {
+        if (this.value === show_content) {
+            this.value = "";
+        }
+
+    };
+
+    //给搜索框绑定失去了鼠标焦点事件
+    d1Ele.onblur = function () {
+        // 前提是内容为空
+        if (!this.value.trim()) {
+            this.value = show_content;
+        }
+
+    }
+</script>
+</body>
+</html>

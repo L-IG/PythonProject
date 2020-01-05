@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<label for="d1">
+    <input type="text" id="d1">
+</label>
+<input type="button" value="开始" id="b1">
+<input type="button" value="停止" id="t1">
+<script>
+    // 获取当前时间字符串的形式
+
+    var b1Ele = document.getElementById('b1');
+    var d1Ele = document.getElementById('d1');
+    var t1Ele = document.getElementById('t1');
+    var t = null;
+
+    // 专门写一个函数,定时去做某一件事
+    function foo() {
+        var date = new Date();
+        d1Ele.value = date.toLocaleString();
+    }
+
+    // 根据botton按钮的绑定事件,找到input搜索框,把时间填进去,并且写一个计时函数,每一秒刷新一次(每一秒写一次时间)
+    b1Ele.onclick = function () {
+        foo();
+        // 此处t相当于一个文件句柄一样,并不是把t删除了就可以了,需要根据t把真正系统资源删除掉
+        if (t === null) {
+            t = setInterval(foo, 1000);
+        }
+    };
+
+    //停止功能
+    t1Ele.onclick = function () {
+        clearInterval(t);
+        t = null;
+        // (function () {
+        //     d1Ele.value="";
+        // })()
+    }
+
+
+</script>
+</body>
+</html>
